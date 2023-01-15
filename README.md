@@ -190,3 +190,25 @@ Para utilizar template strings se debe usar ***comillas invertidas ``***, y para
     `;
 
     document.body.innerHTML = html;
+
+### Arrow Functions
+
+Las arrow functions son funciones anonimas que se pueden utilizar para simplificar el codigo, y se pueden utilizar para interpolar variables.
+
+#### return implicito
+
+    El return es implicito cuando se utiliza una arrow function en una sola linea, y se puede utilizar para interpolar variables.
+
+    // ES5
+    const years = [1990, 1965, 1982, 1937];
+
+    var ages5 = years.map(function(el) {
+      return 2016 - el;
+    });
+
+    // ES6
+
+    let ages6 = years.map(el => 2016 - el);
+
+    ages6 = years.map((el, index) => `Age element ${index + 1}: ${2016 - el}.`);
+
