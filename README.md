@@ -327,3 +327,27 @@ Las clases son una forma de crear objetos, y se pueden utilizar para interpolar 
 
 La herencia es una forma de crear objetos que heredan de otros objetos, y se pueden utilizar para interpolar variables obteniendo sus metodos y atributos.
 
+### acortar objetos
+
+Los objetos se pueden acortar para asignar valores a los atributos de un objeto, y se pueden utilizar para interpolar variables.
+
+    // ES5
+    var name = "John";
+    var age = 26;
+
+    var obj = {
+      name: name,
+      age: age
+    };
+
+    // ES6
+
+    const name = "John";
+    const age = 26;
+
+    const obj = {
+      name,
+      age
+    };
+
+
