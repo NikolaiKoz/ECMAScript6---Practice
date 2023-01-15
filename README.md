@@ -212,3 +212,31 @@ Las arrow functions son funciones anonimas que se pueden utilizar para simplific
 
     ages6 = years.map((el, index) => `Age element ${index + 1}: ${2016 - el}.`);
 
+### Parametros por defecto
+
+Los parametros por defecto son parametros que se pueden utilizar para asignar un valor por defecto a los parametros de una funcion, y se pueden utilizar para interpolar variables.
+
+    // ES5
+    function SmithPerson(firstName, yearOfBirth, lastName = "Smith")
+    {
+      lastName === undefined ? lastName = "Smith" : lastName = lastName;
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.yearOfBirth = yearOfBirth;
+    }
+
+    var john = new SmithPerson("John", 1990);
+
+    // ES6
+
+    function SmithPerson(firstName, yearOfBirth, lastName = "Smith")
+    {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.yearOfBirth = yearOfBirth;
+    }
+
+    const john = new SmithPerson("John", 1990);
+
+
+
