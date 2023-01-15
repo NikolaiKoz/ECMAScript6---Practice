@@ -1,5 +1,29 @@
-console.log('Hola Mundo!');
+//Nuevas formas de declara variables en ES6
 
-let nombre = 'Wolverine';
+var nombreVar = "Juan";
 
-console.log(nombre);
+console.log("nombreVar: " + nombreVar);
+
+var nombreVar = "Pedro";
+
+console.log("nombreVar 2: " +nombreVar);
+
+//Var permite redeclarar la variable y sobreescribir su valor pero no es recomendable hacerlo
+
+let nombreLet = "Luis";
+
+console.log("nombreLet: " + nombreLet);
+
+// let nombreLet = "Maria"; //No se puede redeclarar la variable con let ya que marca error
+
+console.log("nombreLet 2: " + nombreLet);
+
+function saludar(){
+    let nombre = "Juan";
+    console.log("Hola " + nombre);
+}
+
+saludar();
+
+// console.log("Hola " + nombre); Let y const solo existen dentro del scope donde fueron declaradas.
+
