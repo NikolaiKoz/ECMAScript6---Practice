@@ -2,7 +2,7 @@ const promesa = new Promise(
     (resolve, reject) =>{
         //Accion que se ejecuta
         // resolve('Se ejecuto la promesa');
-        reject('No se ejecuto la promesa');
+        // reject('No se ejecuto la promesa');
     }
 );
 

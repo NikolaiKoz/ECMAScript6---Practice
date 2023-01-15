@@ -407,5 +407,44 @@ Una promesa es un codifo que nos va a permitir esperar a que suceda algo y depen
 
 Ver llamadas ajax
 
+### string.startsWith()
+
+El metodo startsWith() nos permite saber si un string empieza con un valor determinado
+
+    var str = "Hello world, welcome to the universe.";
+
+    var n = str.startsWith("Hello");
+
+    console.log(n);
+
+### string.endsWith()
+
+El metodo endsWith() nos permite saber si un string termina con un valor determinado
+
+    var str = "Hello world, welcome to the universe.";
+
+    var n = str.endsWith("universe.");
+
+    console.log(n);
+
+### string.includes()
+
+El metodo includes() nos permite saber si un string contiene un valor determinado
+
+    var str = "Hello world, welcome to the universe.";
+
+    var n = str.includes("welcome");
+
+    console.log(n);
+
+### string.repeat()
+
+El metodo repeat() nos permite repetir un string un numero determinado de veces
+
+    var str = "Hello world, welcome to the universe.";
+
+    var n = str.repeat(2);
+
+    console.log(n);
 
 
