@@ -1,0 +1,25 @@
+{
+  "name": "ecmascript6---practice",
+  "version": "1.0.0",
+  "description": "EcmaScript6 practice.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel ./src/js -d ./dist/js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikolaiKoz/ECMAScript6---Practice.git"
+  },
+  "author": "Vallejos Jose Luis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikolaiKoz/ECMAScript6---Practice/issues"
+  },
+  "homepage": "https://github.com/NikolaiKoz/ECMAScript6---Practice#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2"
+  }
+}

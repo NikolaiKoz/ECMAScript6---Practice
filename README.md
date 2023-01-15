@@ -38,10 +38,36 @@ Para ello se agrega la bandera ***--save-dev*** al comando de instalacion.
 
     npm install --save-dev @babel/core @babel/cli @babel/preset-env
 
-Aqui estamos instalando babel, y tambien el preset de babel para ES6.
+Aqui estamos instalando babel, tambien el preset de babel para ES6 y babel cli.
 
 Un preset es un conjunto de plugins de babel, que nos permite compilar codigo de ES6 a ES5.
 
+- Luego para comprobar de instalarlo ingresamos al package.json y agregamos el siguiente script:
 
+    "scripts": {
+      "build": "babel src -d dist"
+    }
 
+- Por mi estructura de carpetas, el comando seria el siguiente:
 
+    "scripts": {
+      "build": "babel ./src/js -d ./dist/js"
+    }
+
+Esto significa que el codigo de ES6 esta en la carpeta src en la carpeta js, y que el codigo compilado se guardara en la carpeta dist en la carpeta js.
+
+para correr este comando se ejecuta el siguiente comando:
+
+    npm run build
+
+Ahora ya tenemos babel instalado y se ejecutamos el script en la carpeta dist se crearan los archivos, pero no estaran compilados ***babel*** funciona en dos pasos, primero lee el codigo y luego lo compila, asi que ahora debemos ***configurar*** babel.
+
+### Configuracion
+
+Para configurar babel, debemos crear un archivo llamado ***babel.config.json*** en la raiz del proyecto, y dentro de este archivo debemos agregar lo siguiente:
+
+    {
+      "presets": ["@babel/preset-env"]
+    }
+
+Ahora si ejecutamos el comando ***npm run build***, se compilara el codigo de ES6 a ES5, y se guardara en la carpeta dist.
