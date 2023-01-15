@@ -280,3 +280,50 @@ La desestructuracion de objetos es una forma de extraer datos de un objeto, y se
 
     const {firstName, lastName} = obj;
 
+    const {firstName: a, lastName: b} = obj;
+
+### clases
+
+Las clases son una forma de crear objetos, y se pueden utilizar para interpolar variables.
+
+    // ES5
+    var Person5 = function(name, yearOfBirth, job) {
+      this.name = name;
+      this.yearOfBirth = yearOfBirth;
+      this.job = job;
+    }
+
+    Person5.prototype.calculateAge = function() {
+      var age = new Date().getFullYear() - this.yearOfBirth;
+      console.log(age);
+    }
+
+    var john5 = new Person5("John", 1990, "teacher");
+
+    // ES6
+
+    class Person6 {
+      constructor(name, yearOfBirth, job) {
+        this.name = name;
+        this.yearOfBirth = yearOfBirth;
+        this.job = job;
+      }
+
+      calculateAge() {
+        let age = new Date().getFullYear() - this.yearOfBirth;
+        console.log(age);
+      }
+
+      static greeting() {
+        console.log("Hey there!");
+      }
+    }
+
+    const john6 = new Person6("John", 1990, "teacher");
+
+    Person6.greeting();
+
+### Herencia
+
+La herencia es una forma de crear objetos que heredan de otros objetos, y se pueden utilizar para interpolar variables obteniendo sus metodos y atributos.
+
