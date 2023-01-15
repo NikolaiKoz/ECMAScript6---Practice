@@ -238,5 +238,45 @@ Los parametros por defecto son parametros que se pueden utilizar para asignar un
 
     const john = new SmithPerson("John", 1990);
 
+### Desestructuracion de objetos
 
+La desestructuracion de objetos es una forma de extraer datos de un objeto, y se puede utilizar para interpolar variables.
+
+    // ES5
+    var john = ["John", 26];
+    var name = john[0];
+    var age = john[1];
+
+    // ES6
+
+    const [name, age] = ["John", 26];
+
+    const obj = {
+      firstName: "John",
+      lastName: "Smith"
+    };
+
+    const {firstName, lastName} = obj;
+
+    const {firstName: a, lastName: b} = obj;
+
+    ### Desestructuracion de arreglos
+
+    La desestructuracion de arreglos es una forma de extraer datos de un arreglo, y se puede utilizar para interpolar variables.
+
+    // ES5
+    var john = ["John", 26];
+    var name = john[0];
+    var age = john[1];
+
+    // ES6
+
+    const [name, age] = ["John", 26];
+
+    const obj = {
+      firstName: "John",
+      lastName: "Smith"
+    };
+
+    const {firstName, lastName} = obj;
 
