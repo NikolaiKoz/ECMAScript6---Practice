@@ -150,3 +150,43 @@ En el ejemplo anterior, se declaro una variable ***x*** con ***const*** dentro d
 - ***const*** debe ser utilizada practicamente siempre, ya que no se puede modificar el valor de la variable, y si se intenta modificar el valor de la variable, se lanzara un error, solo se debe usar ***let*** cuando se necesite modificar el valor de la variable.
 
 - ***var*** no se debe usar, ya que no se puede acceder a la variable desde fuera del bloque en el que se declaro, y si se intenta acceder a la variable desde fuera del bloque, se lanzara un error.
+
+### Template Strings
+
+Los template strings son cadenas de texto que se pueden utilizar para concatenar cadenas de texto, y se pueden utilizar para interpolar variables.
+Para utilizar template strings se debe usar ***comillas invertidas ``***, y para interpolar variables se debe usar ***${variable}***.
+
+    let name = "John";
+    let age = 31;
+    let job = "Web Developer";
+    let city = "Miami";
+    let html;
+
+    // Without template strings (es5)
+    html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + '</li><li>Job: ' + job + '</li><li>City: ' + city + '</li></ul>';
+
+    html = '<ul>' +
+      '<li>Name: ' + name + '</li>' +
+      '<li>Age: ' + age + '</li>' +
+      '<li>Job: ' + job + '</li>' +
+      '<li>City: ' + city + '</li>' +
+    '</ul>';
+
+    function hello() {
+      return "hello";
+    }
+
+    // With template strings (es6)
+    html = `
+      <ul>
+        <li>Name: ${name}</li>
+        <li>Age: ${age}</li>
+        <li>Job: ${job}</li>
+        <li>City: ${city}</li>
+        <li>${2 + 2}</li>
+        <li>${hello()}</li>
+        <li>${age > 30 ? "Over 30" : "Under 30"}</li>
+      </ul>
+    `;
+
+    document.body.innerHTML = html;
