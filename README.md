@@ -447,4 +447,53 @@ El metodo repeat() nos permite repetir un string un numero determinado de veces
 
     console.log(n);
 
+## webpack
 
+Webpack es un empaquetador de modulos, que nos permite importar modulos de javascript y compilarlos en un solo archivo, ademas de que nos permite importar archivos css, imagenes, etc.
+
+- Instalacion
+
+    npm install --save-dev webpack
+    npm install --save-dev webpack-cli
+
+
+- Configuracion
+
+Creo un nuevo script en el package.json
+
+    "scripts": {
+          "build-webpack": "webpack"
+    },
+
+Creo un archivo webpack.config.js
+
+Y pegamos lo siguiente
+
+const path = require('path');
+
+module.exports = {
+  entry: './src/js/app.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.join(__dirname, './dist/js'),
+  },
+};
+
+Ahora debemos configurar babel para que trabaje con webpack, debemos tener ***Babel loader*** y agregamos lo siguiente a nuestro archivo webpack.config.js
+
+{
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
+    ]
+  }
+}
